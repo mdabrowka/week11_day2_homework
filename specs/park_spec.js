@@ -23,4 +23,10 @@ it('should add a dino to an enclosure', function () {
   assert.strictEqual(park.enclosureSize(), 1);
 })
 
+it('should remove a dino to an enclosure', function () {
+  park.addToEnclosure(dinosaur1);
+  park.removeFromEnclosure("Diplodocus");
+  assert.strictEqual(park.enclosureSize(), 0);
+})
+
 });
