@@ -10,8 +10,14 @@ describe('Dinosaur', function() {
      dinosaur = new Dinosaur("T-Rex", 2);
  })
 
-  it('dinosaur has a name', function () {
+  it('dinosaur has a type', function () {
     assert.strictEqual(dinosaur.type, "T-Rex");
   });
+
+  it('dinosaur has a number of offspring per year', function () {
+    assert.strictEqual(dinosaur.offspringPerYear, 2);
+  });
+
+
 
   });
