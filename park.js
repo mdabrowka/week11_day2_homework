@@ -21,6 +21,17 @@ Park.prototype.removeFromEnclosure = function (type) {
 }
 
 
+Park.prototype.moreThanTwoOffspring = function () {
+  var fertileDinos = [];
+  for (var dinosaur of this.enclosure) {
+    if (dinosaur.offspringPerYear > 2) {
+      fertileDinos.push(dinosaur);
+    }
+  
+  }
+  return fertileDinos.length;
+}
+
 
 
 module.exports = Park;
