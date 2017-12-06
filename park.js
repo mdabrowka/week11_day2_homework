@@ -16,6 +16,7 @@ Park.prototype.removeFromEnclosure = function (type) {
       if (dinosaur.type === type) {
         var index = this.enclosure.indexOf(dinosaur);
         this.enclosure.splice(index, 1);
+        //needs to loop throught the entire array and remove all of the dinosaurs of that type
     }
   }
 }
@@ -27,9 +28,8 @@ Park.prototype.moreThanTwoOffspring = function () {
     if (dinosaur.offspringPerYear > 2) {
       fertileDinos.push(dinosaur);
     }
-  
   }
-  return fertileDinos.length;
+  return fertileDinos;
 }
 
 

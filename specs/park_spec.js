@@ -32,7 +32,10 @@ it('should remove a dino to an enclosure', function () {
 it('should return a dino with more than 2 offspring', function () {
   park.addToEnclosure(dinosaur1);
   park.addToEnclosure(dinosaur2);
-  assert.strictEqual(park.moreThanTwoOffspring(), 2);
+  // assert.strictEqual(park.moreThanTwoOffspring(), 2);
+  assert.deepStrictEqual(park.moreThanTwoOffspring(), [dinosaur1, dinosaur2]);
+
+  // deepStrictEqual to check for the contents of the array
 })
 
 
